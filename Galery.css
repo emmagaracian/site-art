@@ -35,7 +35,15 @@ header {
 .navbar a {
     text-decoration: none;
     color: #000000;
+
 }
+
+.navbar:hover {
+    text-shadow: 2px 2px 2px 5px ; 
+    transform : scale(1.1) ; 
+    transition: all 0.3s ease;
+}
+
 
 .banner img {
     width: 75%;
@@ -63,10 +71,19 @@ h2 {
 }
 
 .art-grid, .artist-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+ .art-item img, .artist-item img {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .art-item img:hover, .artist-item img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    
 
 .art-item, .artist-item {
     background-color: #fff;
@@ -116,7 +133,7 @@ footer {
 }
 
 
-/* Mobile styles */
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -150,14 +167,22 @@ footer {
 
 @media (min-width: 769px) and (max-width: 1024px) {
     .navbar {
+        flex-direction: column
+        align-items center;
         gap: 50px;
     }
+
+    .banner img {
+        width: 100%;
+    }    
 
     .art-grid, .artist-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
     .bio-content img {
+        flex-direction: column;
+        align-items: center;
         width: 50%;
     }
 
