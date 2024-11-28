@@ -19,7 +19,7 @@ header {
 }
 
 .logo {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
     font-family: serif;
 }
@@ -72,7 +72,7 @@ h2 {
 
 .art-grid, .artist-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(3,1fr);
         gap: 20px;
     }
     
