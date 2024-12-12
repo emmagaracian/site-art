@@ -139,6 +139,10 @@ footer {
         flex-direction: column;
         gap: 20px;
     }
+    .logo{
+        font-size: 80%;
+        font-weight: bold;
+    }
 
     .banner img {
         width: 90%;
